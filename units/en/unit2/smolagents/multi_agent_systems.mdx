@@ -135,7 +135,7 @@ import os
 from PIL import Image
 from smolagents import CodeAgent, GoogleSearchTool, InferenceClientModel, VisitWebpageTool
 
-model = InferenceClientModel(model_id="Qwen/Qwen2.5-Coder-32B-Instruct", provider="together")
+model = InferenceClientModel(model_id="Qwen/Qwen3-Coder-480B-A35B-Instruct", provider="together")
 ```
 
 We can start by creating a simple agent as a baseline to give us a simple report.
@@ -235,7 +235,7 @@ The manager agent should have plotting capabilities to write its final report: s
 
 ```python
 model = InferenceClientModel(
-    "Qwen/Qwen2.5-Coder-32B-Instruct", provider="together", max_tokens=8096
+    "Qwen/Qwen3-Coder-480B-A35B-Instruct", provider="together", max_tokens=8096
 )
 
 web_agent = CodeAgent(

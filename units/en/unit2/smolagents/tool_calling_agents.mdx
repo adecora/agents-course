@@ -50,7 +50,7 @@ Let's revisit the previous example where Alfred started party preparations, but 
 ```python
 from smolagents import ToolCallingAgent, WebSearchTool, InferenceClientModel
 
-agent = ToolCallingAgent(tools=[WebSearchTool()], model=InferenceClientModel())
+agent = ToolCallingAgent(tools=[WebSearchTool()], model=InferenceClientModel(tool_choice="auto"))
 
 agent.run("Search for the best music recommendations for a party at the Wayne's mansion.")
 ```
